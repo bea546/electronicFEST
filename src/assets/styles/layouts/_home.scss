@@ -343,6 +343,12 @@ Pagina del Blog
     display: flex;
     flex-direction: column;
 
+    @media screen and (min-width: 600px) {
+      width: 33%;
+      margin: 0 auto 2%;
+      min-width: 0;
+    }
+
     &__title {
       font-size: 120%;
       font-weight: 700;
@@ -379,14 +385,6 @@ Pagina del Blog
         border: none;
         margin-top: auto;
         padding: 10px;
-      }
-    }
-
-    @media screen and (min-width: 600px) {
-      .div__ward__card {
-        width: 33%;
-        margin: 0 auto 2%;
-        min-width: 0;
       }
     }
   }
