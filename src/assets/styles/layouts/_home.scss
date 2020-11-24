@@ -327,7 +327,6 @@ Pagina del Blog
   box-sizing: border-box;
 }
 
-
 .div__ward {
   max-width: 70%;
   display: flex;
@@ -366,30 +365,29 @@ Pagina del Blog
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      /* a flex: 1 also works here, but is buggy on IE11 */
+
+      &__img {
+        margin: 20px 0;
+        align-self: center;
+        width: 100%;
+        height: auto;
+      }
+
+      &__button {
+        background: $color-black;
+        color: $color-white;
+        border: none;
+        margin-top: auto;
+        padding: 10px;
+      }
     }
 
-    &__img {
-      margin: 20px 0;
-      align-self: center;
-      width: 100%;
-      height: auto;
-    }
-
-    &__button {
-      background: $color-black;
-      color: $color-white;
-      border: none;
-      margin-top: auto;
-      padding: 10px;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    .div__ward__card {
-      width: 33%;
-      margin: 0 auto 2%;
-      min-width: 0;
+    @media screen and (min-width: 600px) {
+      .div__ward__card {
+        width: 33%;
+        margin: 0 auto 2%;
+        min-width: 0;
+      }
     }
   }
 }
