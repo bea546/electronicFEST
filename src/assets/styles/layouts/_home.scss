@@ -1,0 +1,395 @@
+/** @font-face {
+  font-family: 'Battling';
+  src: url("../fonts/Battling1NPmed.otf") format("opentype");
+} **/
+
+.sr {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect (1px, 1px, 1px, 1px);
+}
+
+.general {
+  font-size: 1.1rem;
+  background: url('../../assets/images/hiclipart.com.png') no-repeat;
+  background-position: right top;
+  background-size: cover;
+  font-family: $font-family-serif;
+}
+
+.page {
+  background: $color-body;
+}
+
+a {
+  color: $color-a-negro;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-a-red;
+  }
+}
+
+/*
+Les regles que van a continuació aconsegueixen que els continguts dins de l'element de class.container s'adaptin als diversos dipositius.
+*/
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+
+  @media (min-width: 576px) {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
+
+/**********************************
+Menús de navegación
+***********************************/
+.nav__container {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+
+  &__ul {
+    list-style: none;
+    font-size: 1rem;
+  }
+}
+
+.container__header__top {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+
+  &__ul {
+    list-style: none;
+    margin-bottom: 15px;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__ul__li {
+    display: inline-block;
+    font-size: 0.8rem;
+  }
+
+  &__ul__li::before {
+    content: " | ";
+  }
+
+  &__ul__li:first-child::before {
+    content: "";
+  }
+
+  &__ul__li--current {
+    border-bottom: 2px solid $color-black;
+  }
+}
+
+//ojo
+
+@media (min-width: 768px) {
+  .nav__container__ul__li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .container__header__top {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/** estilos para el index resuelto con **/
+
+/**********************************
+
+Pagina del Blog
+
+***********************************/
+.article {
+  text-align: justify;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.75rem;
+
+  &__header__h2,
+  &__h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1em;
+    margin-bottom: 1.5rem;
+    font-size: 3em;
+    text-align: left;
+  }
+
+  &__header__img--rounded {
+    border-radius: 50%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__figure {
+    width: 75%;
+    margin: 30px auto;
+  }
+
+  &__header--autor {
+    background-color: $color-grey;
+    padding: 15px;
+    overflow: auto;
+  }
+
+  &__header_p--meta {
+    font-size: 1.3rem;
+  }
+
+  &__header_p--autor {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+
+  &__header__p--bio {
+    margin-top: 50px;
+    font-size: 1rem;
+  }
+
+  &__header {
+    background-color: $color-white;
+    color: $color-black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 4px solid $color-grey;
+    text-align: center;
+  }
+
+  &__p--intro {
+    font-size: 1.6rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    clear: left;
+  }
+
+  &__blockquote {
+    border-right: 5px solid $color-red;
+    background-color: $color-grey;
+    padding: 15px 30px;
+    margin: 15px 0;
+  }
+
+  &__footer__p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+}
+
+/* Estilos para la paágina con el listado de aplicaciones */
+
+/**************************** Footer *****************************/
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: $color-black;
+  color: $color-white;
+  text-align: center;
+
+  &__p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  &__a--color {
+    color: $color-white;
+
+    &:hover {
+      color: $color-a-red;
+    }
+  }
+
+  &__nav {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    &__ul {
+      list-style: none;
+      font-size: 1rem;
+    }
+
+    &__ul__li {
+      list-style: none;
+      font-size: 1rem;
+      display: block;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+        padding-left: 15px;
+      }
+    }
+
+    &__ul__li:first-child {
+      padding-left: 0;
+    }
+
+    &__ul__li:last-child {
+      padding-right: 0;
+    }
+  }
+
+  &__redes {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+
+    &__ul {
+      list-style-type: none;
+      padding: 0;
+      margin-left: 0;
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+
+    &__ul__li {
+      display: inline-block;
+      padding-left: 30px;
+
+      @media (min-width: 768px) {
+        display: inline-block;
+        padding-left: 15px;
+      }
+    }
+
+    &__ul__li:first-child {
+      padding-left: 0;
+    }
+
+    &__ul__li:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+/****************************
+ bandas
+*****************************/
+* {
+  box-sizing: border-box;
+}
+
+
+.div__ward {
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  &__card {
+    background: $color-white;
+    border: 1px solid $color-grey;
+    box-shadow: 1px 1px 2px $shadow;
+    min-width: 100%;
+    padding: 10px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 120%;
+      font-weight: 700;
+    }
+
+    &__meta {
+      display: flex;
+    }
+
+    &__category,
+    &__author {
+      flex: 1;
+    }
+
+    &__author {
+      text-align: right;
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      /* a flex: 1 also works here, but is buggy on IE11 */
+    }
+
+    &__img {
+      margin: 20px 0;
+      align-self: center;
+      width: 100%;
+      height: auto;
+    }
+
+    &__button {
+      background: $color-black;
+      color: $color-white;
+      border: none;
+      margin-top: auto;
+      padding: 10px;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    .div__ward__card {
+      width: 33%;
+      margin: 0 auto 2%;
+      min-width: 0;
+    }
+  }
+}
