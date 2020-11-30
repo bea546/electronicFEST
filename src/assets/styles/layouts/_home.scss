@@ -163,12 +163,16 @@ Pagina del Blog
     text-align: left;
   }
 
+  &__header__p--meta {
+    font-size: 1rem;
+  }
+
   &__header__img--rounded {
     border-radius: 50%;
     float: left;
     margin-right: 15px;
     margin-bottom: 1rem;
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
   }
 
@@ -178,7 +182,7 @@ Pagina del Blog
   }
 
   &__figure {
-    width: 75%;
+    width: 50%;
     margin: 30px auto;
   }
 
@@ -188,18 +192,14 @@ Pagina del Blog
     overflow: auto;
   }
 
-  &__header_p--meta {
-    font-size: 1.3rem;
-  }
-
-  &__header_p--autor {
+  &__header__p--autor {
     margin-top: 50px;
     font-size: 1rem;
   }
 
   &__header__p--bio {
     margin-top: 50px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   &__header {

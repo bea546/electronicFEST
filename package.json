@@ -8,10 +8,9 @@
     "parcel:build": "parcel build src/index.html --public-url ./ --out-dir dist --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader",
     "dev": "npm-run-all clean parcel:dev",
-    "build": "npm-run-all clean parcel:build",
+    "build": "npm-run-all clean stylelint parcel:build",
     "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
-    "stylelint": "stylelint src/**/*.scss",
-    "build": "npm-run-all clean stylelint parcel:build"
+    "stylelint": "stylelint src/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -42,6 +41,9 @@
     "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1"
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }

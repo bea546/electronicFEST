@@ -13,3 +13,4 @@
 +( function() {
   console.log('Hello, UOC!');
 } )();
+import 'bootstrap';
