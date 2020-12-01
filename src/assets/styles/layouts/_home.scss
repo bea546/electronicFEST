@@ -395,3 +395,133 @@ Pagina del Blog
     }
   }
 }
+
+/****************************
+ plantilla grid
+*****************************/
+@supports (display: grid) {
+  .main {
+    display: grid;
+    grid-gap: 0 64px;
+    grid-template-columns: minmax(auto, 342px) max-content;
+    grid-template-rows: repeat(2, min-content) 64px min-content;
+    transform: rotate(-15deg);
+    transition: transform 0.4s ease;
+    background-color: rgba(248, 221, 221, 0.5);
+    align-items: center;
+    justify-content: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container--poster {
+    height: 400px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+
+  .main__artists__h1,
+  .main__artists__h2,
+  .main__artists__h3,
+  .main__artists__h4,
+  .main__artists__p,
+  .main__artists__ul,
+  .main__artists__li {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media (max-width: 900px) {
+    .main {
+      grid-template-columns: repeat(2, auto);
+      transform: rotate(0);
+      margin: 0 0 64px 8px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .main {
+      display: block;
+    }
+  }
+
+  .main__h1,
+  .main__h2,
+  .main__artists {
+    grid-column: 2;
+  }
+
+  .main__h1,
+  .main__h2,
+  .main__artists__li {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .main__h1 {
+    color: #4d818c;
+  }
+
+  .main__h2 {
+    display: flex;
+    flex-flow: column;
+    color: #a46697;
+  }
+
+  .main__artists__p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .main__artists__p--especial {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background-color: #7e7676;
+    color: antiquewhite;
+    font-weight: bold;
+  }
+
+  @media (max-width: 700px) {
+    .main__h2 {
+      margin-bottom: 64px;
+    }
+
+    .main__h1,
+    .main__h2,
+    .main__artists__li {
+      font-size: 60px;
+      font-weight: 600;
+      line-height: 1;
+    }
+  }
+
+  .main__artists {
+    grid-row: 4;
+  }
+
+  .main__artists li:nth-child(1) {
+    color: #6375c7;
+  }
+
+  .main__artists li:nth-child(2) {
+    color: #d39679;
+  }
+
+  .main__artists li:nth-child(3) {
+    color: #9b9c7d;
+  }
+
+  .main__event-info {
+    grid-row: 4;
+  }
+
+  @media (max-width: 700px) {
+    .main__event-info {
+      margin-top: 64px;
+    }
+  }
+}
