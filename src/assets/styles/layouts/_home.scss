@@ -23,15 +23,6 @@
   background: $color-body;
 }
 
-a {
-  color: $color-a-negro;
-  text-decoration: none;
-
-  &:hover {
-    color: $color-a-red;
-  }
-}
-
 /*
 Les regles que van a continuació aconsegueixen que els continguts dins de l'element de class.container s'adaptin als diversos dipositius.
 */
@@ -78,6 +69,16 @@ Menús de navegación
   &__ul {
     list-style: none;
     font-size: 1rem;
+  }
+
+  &__a {
+    color: $color-a-negro;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-a-red;
+      text-decoration: none;
+    }
   }
 }
 
@@ -251,6 +252,7 @@ Pagina del Blog
 
     &:hover {
       color: $color-a-red;
+      text-decoration: none;
     }
   }
 

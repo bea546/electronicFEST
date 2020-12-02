@@ -13,15 +13,17 @@ module.exports = {
       "at-rule-no-unknown": [
         true,
         {
-          "ignoreAtRules": [
+          ignoreAtRules: [
             "tailwind",
             "apply",
             "responsive",
             "variants",
             "screen",
-            "use"
-          ]
-        }
-      ]
-    }
-  }
+            "use",
+            "function",
+          "return",
+          ],
+        },
+      ],
+    },
+  };
